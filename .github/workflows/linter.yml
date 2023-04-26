@@ -11,7 +11,7 @@ jobs:
       
       - name: Python 3.11
         uses: actions/setup-python@v2
-        with::
+        with:
           python-version:'3.11'
           architecture:'x64'
           
@@ -27,10 +27,10 @@ jobs:
         run: poetry install --no-root
         
       - name: Run black
-       working-directory: ./project
-       run: poetry run black .
+        working-directory: ./project
+        run: poetry run black .
       
       - name: Run flake8
-       working-directory: ./project
-       run: poetry run flake .
+        working-directory: ./project
+        run: poetry run flake8 .
       
