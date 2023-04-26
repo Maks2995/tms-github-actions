@@ -12,3 +12,6 @@ RUN pip install --update pip && pip install poetry
 COPY pyproject.toml poetry.lock ./
 
 RUN poetry install --no-root --no-dev
+
+#RUN
+#COPY
